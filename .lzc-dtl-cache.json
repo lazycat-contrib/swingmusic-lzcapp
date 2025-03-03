@@ -1,0 +1,35 @@
+{
+  "name": "Swing Music",
+  "package": "cloud.lazycat.app.swing-music",
+  "description": "一款美观、自托管的音乐播放器",
+  "homepage": "https://github.com/swingmx/swingmusic",
+  "author": "swingmx",
+  "app_features": [
+    "multi_instance"
+  ],
+  "subdomain": "swing-music",
+  "version": "2.0.1",
+  "iconPath": "icon.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "swingmusic_1970_1970": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_ghcr.io_swingmx_swingmusic_latest": {
+    "originalImage": "ghcr.io/swingmx/swingmusic:latest",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/czyt/swingmx/swingmusic:92851a2d5f11b1eb",
+    "timestamp": "2025-03-03T13:42:17.088Z"
+  },
+  "swingmusic_volume_/music_action": "emptyDir",
+  "swingmusic_volume_/music_location": "user_data",
+  "swingmusic_volume_/music_subdir": "music",
+  "swingmusic_volume_/config_action": "emptyDir",
+  "swingmusic_volume_/config_location": "app_data"
+}
