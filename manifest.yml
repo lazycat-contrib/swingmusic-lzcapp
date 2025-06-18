@@ -16,3 +16,7 @@ services:
     binds:
       - /lzcapp/run/mnt/home/music:/music
       - /lzcapp/var/config:/config
+
+ext_config:
+  enable_document_access: true
+  enable_media_access: true
