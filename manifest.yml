@@ -1,21 +1,26 @@
-lzc-sdk-version: "0.1"
 name: Swing Music
 package: cloud.lazycat.app.swing-music
 version: 2.0.8
+min_os_version: 1.3.8
 description: 一款美观、自托管的音乐播放器
 homepage: https://github.com/swingmx/swingmusic
 author: swingmx
 application:
   subdomain: swing-music
   multi_instance: true
-  routes:
-    - /=http://swingmusic:1970/
+  public_path:
+    - /
+
+  upstreams:
+    - location: /
+      backend: http://swingmusic:1970 
+
 services:
   swingmusic:
-          # ghcr.io/swingmx/swingmusic:v2.0.8
+     # ghcr.io/swingmx/swingmusic:v2.0.8
     image: registry.lazycat.cloud/czyt/swingmx/swingmusic:eadf28cabccd970c
     binds:
-      - /lzcapp/run/mnt/home/music:/music
+      - /lzcapp/document/music:/music
       - /lzcapp/var/config:/config
 
 ext_config:
