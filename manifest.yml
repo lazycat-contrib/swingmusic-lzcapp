@@ -6,23 +6,23 @@ description: 一款美观、自托管的音乐播放器
 homepage: https://github.com/swingmx/swingmusic
 author: swingmx
 application:
-    subdomain: swing-music
-    multi_instance: true
-    public_path:
-        - /
+  subdomain: swing-music
+  multi_instance: true
+  public_path:
+    - /
 
-    upstreams:
-        - location: /
-          backend: http://swingmusic:1970
+  upstreams:
+    - location: /
+      backend: http://swingmusic:1970
 
 services:
-    swingmusic:
-        # ghcr.io/swingmx/swingmusic:v2.0.9
-        image: registry.lazycat.cloud/czyt/swingmx/swingmusic:60d093cf5aee1220
-        binds:
-            - /lzcapp/document/music:/music
-            - /lzcapp/var/config:/config
+  swingmusic:
+    # ghcr.io/swingmx/swingmusic:v2.0.9
+    image: registry.lazycat.cloud/czyt/swingmx/swingmusic:60d093cf5aee1220
+    binds:
+      - /lzcapp/document/{{.U.music_dir_name}}:/music
+      - /lzcapp/var/config:/config
 
 ext_config:
-    enable_document_access: true
-    enable_media_access: true
+  enable_document_access: true
+  enable_media_access: true
