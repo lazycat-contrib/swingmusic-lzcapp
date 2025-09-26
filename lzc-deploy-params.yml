@@ -1,0 +1,12 @@
+params:
+  - id: music_dir_name
+    type: string
+    name: "music directory name under user document directory"
+    description: "the swing music will play the special music, you can set it to 'music' or 'others'"
+    default_value: "music"
+
+locales:
+  zh:
+    music_dir_name:
+      name: "音乐目录名称"
+      description: "swing音乐将播放特殊音乐，您可以将其设置为'music'或'others'"
