@@ -26,3 +26,12 @@ services:
 ext_config:
   enable_document_access: true
   enable_media_access: true
+
+locales:
+  zh:
+    name: "Swing Music"
+    description: "一款美观、自托管的音乐播放器"
+
+  en:
+    name: "Swing Music"
+    description: "A beautiful, self-hosted music player for your local audio files."
