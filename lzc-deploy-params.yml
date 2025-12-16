@@ -2,11 +2,11 @@ params:
   - id: music_dir_name
     type: string
     name: "music directory name under user document directory"
-    description: "the swing music will play the special music, you can set it to 'music' or 'others'"
+    description: "the swing music will play the special music, it can be a directory named 'music' or 'others'(directory will be created if not exist), then you can select /music in the software interface to play"
     default_value: "music"
 
 locales:
   zh:
     music_dir_name:
       name: "音乐目录名称"
-      description: "swing音乐将播放特殊音乐，您可以将其设置为'music'或'others'"
+      description: "swingmusic将播放指定目录下的音乐，您可以选择您主目录下的文件夹，比如'music'或'others'(如果目录不存在，将会自动创建），然后你可以通过在软件界面选择/music进行播放"
