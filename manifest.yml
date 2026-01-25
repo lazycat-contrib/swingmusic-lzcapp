@@ -8,8 +8,6 @@ author: swingmx
 application:
   subdomain: swing-music
   multi_instance: true
-  public_path:
-    - /
 
   upstreams:
     - location: /
